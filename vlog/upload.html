@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladda Upp Video</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="main-title">Ladda Upp Din Video</h2>
+        <form class="upload-form">
+            <label for="video-title">Titel:</label>
+            <input type="text" id="video-title" name="video-title" required>
+
+            <label for="video-description">Beskrivning:</label>
+            <textarea id="video-description" name="video-description" rows="4" required></textarea>
+
+            <label for="video-file">Välj Video:</label>
+            <input type="file" id="video-file" name="video-file" accept="video/*" required>
+
+            <button type="submit">Ladda Upp</button>
+        </form>
+    </div>
+</body>
+</html>
