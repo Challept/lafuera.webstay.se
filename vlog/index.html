@@ -3,19 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vlogg</title>
+    <title>Välkommen till Din Vlogg</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Välkommen till Vloggen</h1>
-        <nav>
-            <a href="videos.html">Videos</a>
-            <a href="about.html">Om oss</a>
-        </nav>
+    <!-- Hero Sektion -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Välkommen till Din Nya Vlogg</h1>
+            <p>Följ mina senaste äventyr och tankar!</p>
+            <button onclick="window.location.href='videos.html'">Se Videor</button>
+        </div>
     </header>
+
+    <!-- Huvudinnehåll -->
     <main>
-        <p>Se våra senaste vlogginlägg här.</p>
+        <!-- Om Sektion -->
+        <section class="about-preview">
+            <h2>Om Mig</h2>
+            <p>Lär känna mig bättre och min resa som vlogger. Här delar jag mina upplevelser och tankar.</p>
+            <button onclick="window.location.href='about.html'">Läs Mer</button>
+        </section>
+
+        <!-- Videor Sektion -->
+        <section class="videos-preview">
+            <h2>Senaste Videor</h2>
+            <div class="videos-grid">
+                <div class="video-item">
+                    <video src="sample-video.mp4" controls></video>
+                    <h3>Video Titel 1</h3>
+                </div>
+                <div class="video-item">
+                    <video src="sample-video.mp4" controls></video>
+                    <h3>Video Titel 2</h3>
+                </div>
+                <div class="video-item">
+                    <video src="sample-video.mp4" controls></video>
+                    <h3>Video Titel 3</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ladda Upp Sektion -->
+        <section class="upload-preview">
+            <h2>Ladda Upp Din Vlogg</h2>
+            <p>Har du något att dela? Ladda upp dina videor här.</p>
+            <button onclick="window.location.href='upload.html'">Ladda Upp Video</button>
+        </section>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="current-year"></span> Din Vlogg. Skapad med <a href="https://webstay.se">Webstay.se</a></p>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
