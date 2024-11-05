@@ -3,19 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Butik</title>
+    <title>Välkommen till din nya butik!</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Välkommen till Butiken</h1>
-        <nav>
-            <a href="product.html">Produkter</a>
-            <a href="checkout.html">Kassa</a>
-        </nav>
+    <!-- Hero sektion -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Välkommen till din nya butik</h1>
+            <p>Utforska våra fantastiska produkter och börja din resa med oss.</p>
+            <button onclick="window.location.href='products.html'">Shoppa Nu</button>
+        </div>
     </header>
+
+    <!-- Huvudinnehåll -->
     <main>
-        <p>Här kan du visa butiksinformation och kampanjer.</p>
+        <!-- Produktsektion -->
+        <section class="product-preview">
+            <h2>Våra Produkter</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="produkt1.jpg" alt="Produkt 1">
+                    <h3>Produktnamn 1</h3>
+                    <p>Kort produktbeskrivning.</p>
+                    <button>Se mer</button>
+                </div>
+                <div class="product-item">
+                    <img src="produkt2.jpg" alt="Produkt 2">
+                    <h3>Produktnamn 2</h3>
+                    <p>Kort produktbeskrivning.</p>
+                    <button>Se mer</button>
+                </div>
+                <!-- Fler produkter kan läggas till här -->
+            </div>
+        </section>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="current-year"></span> Din Butik. Skapad med <a href="https://webstay.se">Webstay.se</a></p>
+    </footer>
+
+    <script>
+        // Skript för att uppdatera året automatiskt i footern
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
