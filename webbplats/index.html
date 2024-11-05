@@ -3,19 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webbplats</title>
+    <title>Välkommen till Din Webbplats</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Välkommen till Webbplatsen</h1>
-        <nav>
-            <a href="about.html">Om oss</a>
-            <a href="contact.html">Kontakt</a>
-        </nav>
+    <!-- Hero Sektion -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Välkommen till Din Nya Webbplats</h1>
+            <p>Utforska våra tjänster och upptäck hur vi kan hjälpa dig.</p>
+            <button onclick="window.location.href='about.html'">Läs Mer</button>
+        </div>
     </header>
+
+    <!-- Huvudinnehåll -->
     <main>
-        <p>Detta är en enkel webbsida.</p>
+        <!-- Om Sektion -->
+        <section class="about-preview">
+            <h2>Om Oss</h2>
+            <p>Vi strävar efter att leverera högkvalitativa tjänster för att hjälpa dig att nå dina mål. Lär känna oss och vår historia.</p>
+            <button onclick="window.location.href='about.html'">Läs Mer</button>
+        </section>
+
+        <!-- Tjänster Sektion -->
+        <section class="services-preview">
+            <h2>Våra Tjänster</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Konsultation</h3>
+                    <p>Få expertvägledning från våra erfarna konsulter.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Design och Utveckling</h3>
+                    <p>Bygg din drömwebbplats med oss.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Support</h3>
+                    <p>Kontinuerlig support för att hålla din webbplats i toppskick.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontakt Sektion -->
+        <section class="contact-preview">
+            <h2>Kontakta Oss</h2>
+            <p>Har du frågor? Vi finns här för att hjälpa dig.</p>
+            <button onclick="window.location.href='contact.html'">Kontakta Oss</button>
+        </section>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="current-year"></span> Din Webbplats. Skapad med <a href="https://webstay.se">Webstay.se</a></p>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
